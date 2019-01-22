@@ -1,0 +1,128 @@
+.breadcrumb {
+  border-bottom: 1px solid #cdcdc352;
+  background-color: #ECF0F5;
+  margin-bottom: 0;
+}
+
+.content-wrapper {
+  min-height: 90vh;
+}
+
+.box {
+  border-top: 1px solid #d2d6de
+}
+
+.alert-notice {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.require {
+  color: #e65b5b;
+}
+
+.control-label {
+  font-weight: bold;
+}
+
+.error-content {
+  color: #e65b5b;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+.listing-wrapper h3 {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.radio-content {
+  padding-top: 7px;
+}
+
+.radio-content span {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.radio-content input[type=radio] {
+  margin-right: 3px;
+}
+
+.input-group.date {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.file-upload {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-content {
+  padding-top: 7px;
+}
+
+.hobby-name {
+  margin-right: 10px;
+  margin-left: 2px;
+}
+
+.fr-box .fr-element.fr-view {
+  min-height: 120px;
+}
+
+.fr-toolbar {
+  border-top: 1px solid #d2d6de;
+}
+
+.alert {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.checkbox-content label {
+  font-weight: normal;
+}
+
+.alert-alert {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.flash-message-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content-border-bottom {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+.login-box-body .checkbox input[type=checkbox] {
+  margin-left: 0;
+}
+
+/* Validation Errors */
+.field_with_errors input, .field_with_errors textarea {
+  border: 1px solid #dc3545;
+}
+
+ul.gr-validation-errors {
+  margin-top: 5px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.gr-validation-error-message {
+  color: #dc3545;
+}
+
+.field_with_errors #cke_topic_content {
+  border: 1px solid #dc3545;
+}
+/* End Validation Errors */

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backend</title>
+
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'backend', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'backend', 'data-turbolinks-track' => 'reload' %>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+  <%= render partial: 'layouts/backend/header' %>
+  <%= render partial: 'layouts/backend/sidebar' %>
+
+  <div class="content-wrapper">
+    <%= render partial: 'backend/shared/breadcrumb', locals: {breadcrumbs: @breadcrumbs} %>
+    <%= yield %>
+  </div>
+
+  <%= render partial: 'layouts/backend/footer' %>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<aside class="main-sidebar">
+  <section class="sidebar">
+    <ul class="sidebar-menu" data-widget="tree">
+      <li class="<%= "active" if controller_name == "home" %>">
+        <%= link_to admin_root_path do %>
+          <i class="fa fa-dashboard"></i><span>Dashboard</span>
+        <% end %>
+      </li>
+    </ul>
+  </section>
+</aside>

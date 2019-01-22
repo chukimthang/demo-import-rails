@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frontend</title>
+
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'backend', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'backend', 'data-turbolinks-track' => 'reload' %>
+</head>
+
+<body>
+<div class="col-md-12">
+  <%= render partial: 'backend/shared/alert' %>
+</div>
+<%= yield %>
+</body>
+</html>
