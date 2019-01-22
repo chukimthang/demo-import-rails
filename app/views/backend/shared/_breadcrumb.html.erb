@@ -1,0 +1,11 @@
+<div class="breadcrumb">
+  <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+
+  <% breadcrumbs.keys.each do |key| %>
+    <% if breadcrumbs[key].nil? %>
+      <li><%= key %></li>
+    <% else %>
+      <li><a href="<%= breadcrumbs[key] %>"><%= key %></a></li>
+    <% end %>
+  <% end  %>
+</div>
