@@ -64,3 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'dotenv-rails'
 gem 'devise'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
+gem 'cancancan', '~> 2.0'
+gem 'icheck-rails'
