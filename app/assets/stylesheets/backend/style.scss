@@ -1,3 +1,5 @@
+@import "icheck/square/blue";
+
 .breadcrumb {
   border-bottom: 1px solid #cdcdc352;
   background-color: #ECF0F5;
@@ -92,11 +94,6 @@
   border-color: #f5c6cb;
 }
 
-.flash-message-wrapper {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 .content-border-bottom {
   border-bottom: 1px solid #eee;
   margin-bottom: 15px;
@@ -126,3 +123,44 @@ ul.gr-validation-errors {
   border: 1px solid #dc3545;
 }
 /* End Validation Errors */
+
+.listing-wrapper .btn.btn-info, .listing-wrapper .btn.btn-danger {
+  padding: 3px 8px;
+}
+
+.box-body .form-group label {
+  padding-left: 20px;
+}
+
+.form-horizontal .control-label {
+  text-align: left;
+}
+
+.field-search {
+  margin-bottom: 20px;
+}
+
+.search-form .btn {
+  margin-right: 5px;
+}
+
+.search-form .field-search input[type=search] {
+  width: 95%;
+}
+
+.search-form .button-head-wrapper {
+  margin-top: 5px;
+}
+
+.listing-wrapper h3 {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.search-form select {
+  width: 95%;
+}
+
+.required-star {
+  color: red;
+}

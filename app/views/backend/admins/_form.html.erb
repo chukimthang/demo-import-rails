@@ -1,0 +1,49 @@
+<%= form_for [:admin, admin], html: {class: 'form-horizontal'} do |f| %>
+  <div class="box-body col-md-8">
+    <div class="form-group">
+      <label class="col-md-3">Email <span class="required-star">*</span></label>
+      <div class="col-md-9">
+        <%= f.email_field :email, class: 'form-control', placeholder: 'Enter your Email' %>
+        <%= show_errors admin, :email %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-3">Password
+        <span class="required-star star-password">*</span>
+      </label>
+      <div class="col-md-9">
+        <%= f.password_field :password, class: 'form-control', placeholder: 'Enter your Password' %>
+        <%= show_errors admin, :password %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-3">Password Confirmation
+        <span class="required-star star-password-confirmation">*</span>
+      </label>
+      <div class="col-md-9">
+        <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirm your Password' %>
+        <%= show_errors admin, :password_confirmation %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-3">Role</label>
+      <div class="col-md-9 radio-content">
+        <%= f.radio_button :role, Admin.roles.keys.to_a[0], class: "icheck-me", data: {skin: "square", color: "blue"} %>
+        <span>Admin</span>
+        <%= f.radio_button :role, Admin.roles.keys.to_a[1], class: "icheck-me", data: {skin: "square", color: "blue"} %>
+        <span>Super Admin</span>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="box-footer">
+    <div class="col-md-8">
+      <%= f.submit 'Save', class: 'btn btn-primary col-md-offset-3' %>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+<% end %>
