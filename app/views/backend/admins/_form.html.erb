@@ -1,40 +1,47 @@
 <%= form_for [:admin, admin], html: {class: 'form-horizontal'} do |f| %>
   <div class="box-body col-md-8">
     <div class="form-group">
-      <label class="col-md-3">Email <span class="required-star">*</span></label>
+      <label class="col-md-3">
+        <%= t('view.admins.email') %>
+        <span class="required-star">*</span>
+      </label>
       <div class="col-md-9">
-        <%= f.email_field :email, class: 'form-control', placeholder: 'Enter your Email' %>
+        <%= f.email_field :email, class: 'form-control', placeholder: t('view.admins.email') %>
         <%= show_errors admin, :email %>
       </div>
     </div>
 
     <div class="form-group">
-      <label class="col-md-3">Password
+      <label class="col-md-3">
+        <%= t('view.admins.password') %>
         <span class="required-star star-password">*</span>
       </label>
       <div class="col-md-9">
-        <%= f.password_field :password, class: 'form-control', placeholder: 'Enter your Password' %>
+        <%= f.password_field :password, class: 'form-control', placeholder: t('view.admins.password') %>
         <%= show_errors admin, :password %>
       </div>
     </div>
 
     <div class="form-group">
-      <label class="col-md-3">Password Confirmation
+      <label class="col-md-3">
+        <%= t('view.admins.password_confirmation') %>
         <span class="required-star star-password-confirmation">*</span>
       </label>
       <div class="col-md-9">
-        <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirm your Password' %>
+        <%= f.password_field :password_confirmation, class: 'form-control', placeholder: t('view.admins.password_confirmation') %>
         <%= show_errors admin, :password_confirmation %>
       </div>
     </div>
 
     <div class="form-group">
-      <label class="col-md-3">Role</label>
+      <label class="col-md-3">
+        <%= t('view.admins.role') %>
+      </label>
       <div class="col-md-9 radio-content">
-        <%= f.radio_button :role, Admin.roles.keys.to_a[0], class: "icheck-me", data: {skin: "square", color: "blue"} %>
-        <span>Admin</span>
-        <%= f.radio_button :role, Admin.roles.keys.to_a[1], class: "icheck-me", data: {skin: "square", color: "blue"} %>
-        <span>Super Admin</span>
+        <%= f.radio_button :role, Admin.roles.keys.to_a[0], class: 'icheck-me', data: {skin: 'square', color: 'blue'} %>
+        <span><%= t('view.admins.roles.admin') %></span>
+        <%= f.radio_button :role, Admin.roles.keys.to_a[1], class: 'icheck-me', data: {skin: 'square', color: 'blue'} %>
+        <span><%= t('view.admins.roles.super_admin') %></span>
       </div>
     </div>
   </div>
@@ -42,7 +49,7 @@
 
   <div class="box-footer">
     <div class="col-md-8">
-      <%= f.submit 'Save', class: 'btn btn-primary col-md-offset-3' %>
+      <%= f.submit t('view.button.save'), class: 'btn btn-primary col-md-offset-3' %>
     </div>
   </div>
   <div class="clearfix"></div>

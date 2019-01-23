@@ -1,0 +1,7 @@
+en:
+  controller:
+    admins:
+      created_success: "Admin Create Success"
+      updated_success: "Admin Update Success"
+      deleted_success: "Admin Was Successfully Destroyed"
+      not_found: "Admin Not Found"

@@ -5,11 +5,11 @@ class Backend::AdminsController < Backend::BaseController
 
   def index
     @admins = Admin.order(created_at: :desc).page(params[:page]).per(10)
-    @breadcrumbs = {'Admins' => admin_admins_path, 'List' => nil}
+    @breadcrumbs = {t('view.admins.admins') => admin_admins_path, t('view.layout.list') => nil}
   end
 
   def new
-    @breadcrumbs = {'Admins' => admin_admins_path, 'New' => nil}
+    @breadcrumbs = {t('view.admins.admins') => admin_admins_path, t('view.button.new') => nil}
     @admin = Admin.new
   end
 
@@ -17,32 +17,32 @@ class Backend::AdminsController < Backend::BaseController
     @admin = Admin.new admin_params
     if @admin.save
       respond_to do |format|
-        format.html {redirect_to admin_admins_path, notice: 'Admin was successfully created'}
+        format.html {redirect_to admin_admins_path, notice: t('controller.admins.created_success')}
       end
     else
-      @breadcrumbs = {'Admins' => admin_admins_path, 'New' => nil}
+      @breadcrumbs = {t('view.admins.admins') => admin_admins_path, t('view.button.new') => nil}
       render :new
     end
   end
 
   def edit
-    @breadcrumbs = {'Admins' => admin_admins_path, 'Edit' => nil}
+    @breadcrumbs = {t('view.admins.admins') => admin_admins_path, t('view.button.edit') => nil}
   end
 
   def update
     if @admin.update_attributes admin_params
       respond_to do |format|
-        format.html {redirect_to admin_admins_path, notice: 'Admin was successfully created'}
+        format.html {redirect_to admin_admins_path, notice: t('controller.admins.updated_success')}
       end
     else
-      @breadcrumbs = {'Admins' => admin_admins_path, 'Edit' => nil}
+      @breadcrumbs = {t('view.admins.admins') => admin_admins_path, t('view.button.edit') => nil}
       render :edit
     end
   end
 
   def destroy
     if @admin.destroy
-      flash[:success] = 'Admin was deleted successfully'
+      flash[:success] = t('controller.admins.deleted_success')
     else
       flash[:danger] = @admin.errors.full_messages
     end
@@ -54,7 +54,7 @@ class Backend::AdminsController < Backend::BaseController
 
   def find_admin
     @admin = Admin.find_by_id params[:id]
-    redirect_to admin_admins_path, flash: {danger: 'Admin not found'} unless @admin
+    redirect_to admin_admins_path, flash: {danger: t('controller.admins.not_found')} unless @admin
   end
 
   def admin_params

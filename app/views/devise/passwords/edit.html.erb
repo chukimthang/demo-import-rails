@@ -1,4 +1,4 @@
-<h2 class="page-header" align="center">Change Password</h2>
+<h2 class="page-header" align="center"><%= t('devise.passwords.change_password') %></h2>
 
 <div class="container sessions-wrapper">
   <div class="col-md-4 col-md-offset-4 login-box-body">
@@ -6,19 +6,19 @@
       <%= f.hidden_field :reset_password_token %>
 
       <div class="form-group has-feedback">
-        <%= f.password_field :password, autofocus: true, placeholder: 'New password', class: 'form-control' %>
+        <%= f.password_field :password, autofocus: true, placeholder: t('devise.passwords.new_password'), class: 'form-control' %>
         <span class="fa fa-envelope-o form-control-feedback"></span>
       </div>
       <%= show_errors resource, :password %>
 
       <div class="form-group has-feedback">
-        <%= f.password_field :password_confirmation, autofocus: true, placeholder: 'Password confirmation', class: 'form-control' %>
+        <%= f.password_field :password_confirmation, autofocus: true, placeholder: t('devise.passwords.confirm'), class: 'form-control' %>
         <span class="fa fa-envelope-o form-control-feedback"></span>
       </div>
       <%= show_errors resource, :password_confirmation %>
 
       <div class="row col-xs-4">
-        <%= f.submit 'Update', class: 'btn btn-primary btn-block btn-flat' %>
+        <%= f.submit t('view.button.update'), class: 'btn btn-primary btn-block btn-flat' %>
       </div>
     <% end %>
 

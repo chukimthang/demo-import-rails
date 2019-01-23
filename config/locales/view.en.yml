@@ -1,0 +1,37 @@
+en:
+  view:
+    layout:
+      action: "Action"
+      home_page: "Home Page"
+      home: "Home"
+      message_delete: "Are you sure this record?"
+      dashboard: "Dashboard"
+      profile: "Profile"
+
+    button:
+      create: "Create"
+      edit: "Edit"
+      update: "Update"
+      delete: "Delete"
+      save: "Save"
+      reset: "Reset"
+      add: "Add"
+      remove: "Remove"
+      cancel: "Cancel"
+      new: "New"
+
+    admins:
+      model_name: "Admin"
+      admins: "Admins"
+      id: "ID"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password Confirmation"
+      role: "Role"
+      created_at: "Created at"
+      list_admin: "List Admin"
+      new_admin: "New Admin"
+      edit_admin: "Edit Admin"
+      roles:
+        admin: "Admin"
+        super_admin: "Super Admin"
