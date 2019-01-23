@@ -3,14 +3,14 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="<%= 'active' if controller_name == 'home' %>">
         <%= link_to admin_root_path do %>
-          <i class="fa fa-dashboard"></i><span>Dashboard</span>
+          <i class="fa fa-dashboard"></i><span><%= t('view.layout.dashboard') %></span>
         <% end %>
       </li>
 
       <% if can? :index, Admin %>
         <li class="<%= 'active' if controller_name == 'admins' %>">
           <%= link_to admin_admins_path do %>
-            <i class="fa fa-users"></i><span>Admins</span>
+            <i class="fa fa-users"></i><span><%= t('view.admins.admins') %></span>
           <% end %>
         </li>
       <% end %>

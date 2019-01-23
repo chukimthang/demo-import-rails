@@ -4,9 +4,9 @@
 <section class="content listing-wrapper" id="admin-listing">
   <div class="box">
     <div class="col-md-12 page-header">
-      <h3 class="pull-left">List Admin</h3>
+      <h3 class="pull-left"><%= t('view.admins.list_admin') %></h3>
       <div class="pull-right">
-        <%= link_to 'New', new_admin_admin_path, class: 'btn btn-primary' %>
+        <%= link_to t('view.button.new'), new_admin_admin_path, class: 'btn btn-primary' %>
       </div>
     </div>
     <div class="clearfix"></div>
@@ -15,9 +15,9 @@
       <table class="table table-bordered listing-table">
         <thead>
         <tr>
-          <th class="col-md-1">ID</th>
-          <th>Email</th>
-          <th class="col-md-2">Action</th>
+          <th class="col-md-1"><%= t('view.admins.id') %></th>
+          <th><%= t('view.admins.email') %></th>
+          <th class="col-md-2"><%= t('view.layout.action') %></th>
         </tr>
         </thead>
         <tbody>
@@ -28,13 +28,13 @@
             <td>
               <% if can? :destroy, Admin %>
                 <a href="<%= edit_admin_admin_path(admin) %>" class="action-icon btn btn-info">
-                  Edit
+                  <%= t('view.button.edit') %>
                 </a>
               <% end %>
               <% if can? :destroy, Admin %>
                 <a href="#modal-delete" data-toggle="modal" data-id="<%= admin.id %>"
                    data-url="/admin/admins" class="action-icon remove btn btn-danger">
-                  Delete
+                  <%= t('view.button.delete') %>
                 </a>
               <% end %>
             </td>
@@ -51,4 +51,4 @@
 </section>
 <div class="clearfix"></div>
 
-<%= render partial: 'backend/shared/delete', locals: {model_name: 'Admin'} %>
+<%= render partial: 'backend/shared/delete', locals: {model_name: t('view.admins.model_name')} %>

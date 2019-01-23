@@ -25,10 +25,9 @@
             </li>
             <li class="user-footer">
               <div class="pull-left">
-                <a href="#" class="btn btn-default btn-flat">Profile</a>
               </div>
               <div class="pull-right">
-                <%= link_to 'Signout', destroy_admin_session_path, method: :delete, class: 'btn btn-default btn-flat' %>
+                <%= link_to t('devise.sessions.signed_out'), destroy_admin_session_path, method: :delete, class: 'btn btn-default btn-flat' %>
               </div>
             </li>
           </ul>

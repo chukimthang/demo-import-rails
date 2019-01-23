@@ -1,0 +1,100 @@
+ja:
+  devise:
+    confirmations:
+      confirmed: "アカウントの認証に成功しました。既にログイン済みです"
+      send_instructions: "数分後にアカウント認証の手続きメールが届きます"
+      send_paranoid_instructions:  "メールアドレスが登録済みの場合、本人確認用のメールが数分以内に送信されます"
+    failure:
+      already_authenticated: "すでにログインしています"
+      inactive: "アカウントはまだ承認されていません"
+      invalid: "%{authentication_keys}またはパスワードが違います"
+      locked: "アカウントがロックされています"
+      last_attempt: "もう一回誤るとアカウントがロックされます"
+      not_found_in_database: "%{authentication_keys}またはパスワードが違います"
+      timeout: "セッション切れになりました。続くにはもう一度ログインしてください"
+      unauthenticated: "進むにはログインまたは新規登録する必要があります"
+      unconfirmed: "進むにはアカウントを確認する必要があります"
+    mailer:
+      confirmation_instructions:
+        subject: "メールアドレス確認メール"
+      reset_password_instructions:
+        subject: "パスワードの再設定について"
+      unlock_instructions:
+        subject: "アカウントの凍結解除について"
+      email_changed:
+        subject: "メールアドレスの変更について"
+      password_change:
+        subject: "パスワードの変更について"
+    omniauth_callbacks:
+      failure: "%{kind} アカウントによる認証に失敗しました。理由：（%{reason}）"
+      success: "%{kind} アカウントによる認証に成功しました"
+    passwords:
+      no_token: "このページにはアクセスできません。パスワード再設定メールのリンクからアクセスされた場合には、URL をご確認ください"
+      send_instructions: "パスワードの再設定について数分以内にメールでご連絡いたします"
+      send_paranoid_instructions: "メールアドレスが登録済みの場合、パスワード再設定用のメールが数分以内に送信されます"
+      updated: "パスワードが正しく変更されました"
+      updated_not_active: "パスワードが正しく変更されました"
+      forgot_password: "パスワードをお忘れですか"
+      email: "メール"
+      send: "送信"
+      login: "ログイン？"
+      register_account: "アカウント登録？"
+      characters_minimum: "最小文字数"
+      change_password: "パスワードを変更してください"
+      new_password: "新しいパスワード"
+      confirm: "新しいパスワードを確認"
+      update: "更新"
+      update_password_failed: "パスワードが更新できませんでした。再度ご確認してください。"
+    registrations:
+      destroyed: "アカウントを削除しました。またのご利用をお待ちしております"
+      signed_up: "アカウント登録が完了しました。メールを確認してください"
+      signed_up_but_inactive: "ログインするためには、アカウントを有効化してください"
+      signed_up_but_locked: "アカウントが凍結されているためログインできません"
+      signed_up_but_unconfirmed: "本人確認用のメールを送信しました。メール内のリンクからアカウントを有効化させてください"
+      update_needs_confirmation: "アカウント情報を変更しました。変更されたメールアドレスの本人確認のため、本人確認用メールより確認処理をおこなってください"
+      updated: "アカウント情報を変更しました"
+      signup: "サインアップ"
+      email: "メール"
+      characters_minimum: "最小文字数"
+      characters: "文字"
+      password: "パスワード"
+      password_confirmation: "パスワードの確認"
+      name: "名前"
+      phone: "電話"
+      register: "登録"
+      login: "ログイン？"
+    sessions:
+      signed_in: "ログインしました"
+      signed_out: "ログアウトしました"
+      already_signed_out: "既にログアウト済みです"
+      signin: "サインイン"
+      email: "メール"
+      password: "パスワード"
+      login: "ログイン"
+      facebook: "Facebook"
+      google: "Google"
+      forgot_password: "パスワードをお忘れですか？"
+      register_account: "アカウント登録？"
+      remember_me: "ユーザー情報を保存"
+
+    unlocks:
+      send_instructions: "アカウントの凍結解除方法を数分以内にメールでご連絡します"
+      send_paranoid_instructions: "アカウントが見つかった場合、アカウントの凍結解除方法を数分以内にメールでご連絡します"
+      unlocked: "アカウントを凍結解除しました"
+    shared:
+      login: "ログイン"
+      signup: "サインアップ"
+      forgot_password: "パスワードをお忘れですか？"
+      confirmation: "確認の指示がありませんでしたか？"
+      unlock: "ロック解除の指示を受け取りませんでしたか？"
+
+  errors:
+    messages:
+      already_confirmed: "は既に登録済みです。ログインしてください"
+      confirmation_period_expired: "の期限が切れました。%{period} までに確認する必要があります。 新しくリクエストしてください"
+      expired: "の有効期限が切れました。新しくリクエストしてください"
+      not_found: "は見つかりませんでした"
+      not_locked: "は凍結されていません"
+      not_saved:
+        one: "エラーが発生したため %{resource} は保存されませんでした"
+        other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした"

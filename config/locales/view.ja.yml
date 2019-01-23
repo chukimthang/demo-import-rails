@@ -1,0 +1,37 @@
+ja:
+  view:
+    layout:
+      action: "アクション"
+      home_page: "ホームページ"
+      home: "ホーム"
+      message_delete: "本当に削除しますか？"
+      dashboard: "ダッシュボード"
+      profile: "プロフィール"
+      list: "リスト"
+
+    button:
+      create: "新規作成"
+      edit: "編集"
+      update: "更新"
+      delete: "削除"
+      save: "保存"
+      reset: "リセット"
+      add: "追加"
+      remove: "削除"
+      cancel: "キャンセル"
+      new: "新規作成"
+
+    admins:
+      model_name: "管理者"
+      admins: "管理者"
+      id: "ID"
+      email: "メール"
+      password: "パスワード"
+      password_confirmation: "パスワードの確認"
+      role: "役割"
+      list_admin: "管理者リスト"
+      new_admin: "管理者を追加"
+      edit_admin: "管理者を編集"
+      roles:
+        admin: "管理者"
+        super_admin: "サービス管理者"
