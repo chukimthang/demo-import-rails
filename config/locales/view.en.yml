@@ -7,6 +7,7 @@ en:
       message_delete: "Are you sure this record?"
       dashboard: "Dashboard"
       profile: "Profile"
+      list: "List"
 
     button:
       create: "Create"
