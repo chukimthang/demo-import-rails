@@ -2,21 +2,20 @@ ja:
   activerecord:
     attributes:
       admin:
-        email: "メール"
-        password: "パスワード"
-        password_confirmation: "パスワードの確認"
-
+        email: メール
+        password: パスワード
+        password_confirmation: パスワードの確認
     errors:
       models:
         admin:
           attributes:
             email:
-              blank: "空欄を埋めてください"
-              invalid: "メールフォーマットが不正"
-              taken: "すでに存在します"
+              blank: 空欄を埋めてください
+              invalid: メールフォーマットが不正
+              taken: すでに存在します
             password:
-              blank: '空欄を埋めてください'
-              too_short: '短すぎます'
-              too_long: '50文字まで入力してください'
+              blank: 空欄を埋めてください
+              too_long: 50文字まで入力してください
+              too_short: 短すぎます
             password_confirmation:
-              confirmation: 'パスワードと一致しません'
+              confirmation: パスワードと一致しません

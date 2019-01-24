@@ -34,3 +34,4 @@
 /config/database.yml
 /db/schema.rb
 .env
+Gemfile.lock

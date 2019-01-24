@@ -6,14 +6,14 @@
       <%= f.hidden_field :reset_password_token %>
 
       <div class="form-group has-feedback">
-        <%= f.password_field :password, autofocus: true, placeholder: t('devise.passwords.new_password'), class: 'form-control' %>
-        <span class="fa fa-envelope-o form-control-feedback"></span>
+        <%= f.password_field :password, autofocus: true, placeholder: t('devise.shared.new_password'), class: 'form-control' %>
+        <span class="fa fa-lock form-control-feedback"></span>
       </div>
       <%= show_errors resource, :password %>
 
       <div class="form-group has-feedback">
-        <%= f.password_field :password_confirmation, autofocus: true, placeholder: t('devise.passwords.confirm'), class: 'form-control' %>
-        <span class="fa fa-envelope-o form-control-feedback"></span>
+        <%= f.password_field :password_confirmation, autofocus: true, placeholder: t('devise.shared.password_confirm'), class: 'form-control' %>
+        <span class="fa fa-lock form-control-feedback"></span>
       </div>
       <%= show_errors resource, :password_confirmation %>
 
