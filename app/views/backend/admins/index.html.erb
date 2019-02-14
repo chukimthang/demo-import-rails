@@ -6,7 +6,9 @@
     <div class="col-md-12 page-header">
       <h3 class="pull-left"><%= t('view.admins.list_admin') %></h3>
       <div class="pull-right">
-        <%= link_to t('view.button.new'), new_admin_admin_path, class: 'btn btn-primary' %>
+        <% if can? :create, Admin %>
+          <%= link_to t('view.button.new'), new_admin_admin_path, class: 'btn btn-primary' %>
+        <% end %>
       </div>
     </div>
     <div class="clearfix"></div>
@@ -26,14 +28,14 @@
             <td><%= admin.id %></td>
             <td><%= admin.email %></td>
             <td>
-              <% if can? :destroy, Admin %>
+              <% if can? :update, Admin %>
                 <a href="<%= edit_admin_admin_path(admin) %>" class="action-icon btn btn-info">
                   <%= t('view.button.edit') %>
                 </a>
               <% end %>
               <% if can? :destroy, Admin %>
-                <a href="#modal-delete" data-toggle="modal" data-id="<%= admin.id %>"
-                   data-url="/admin/admins" class="action-icon remove btn btn-danger">
+                <a href="#modal-delete" data-toggle="modal" data-url="/admin/admins/<%= admin.id %>"
+                   class="action-icon remove btn btn-danger">
                   <%= t('view.button.delete') %>
                 </a>
               <% end %>

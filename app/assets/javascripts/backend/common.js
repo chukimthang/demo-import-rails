@@ -7,9 +7,7 @@ $(document).on("turbolinks:load", function () {
     $("#edit-admin .star-password-confirmation").remove();
 
     $(".listing-table").on("click", ".remove", function () {
-      var id = $(this).data("id");
-      var url = $(this).data("url");
-      $('#btn-confirm-delete').attr('href', url + "/" + id);
+      $('#btn-confirm-delete').attr('href', $(this).data("url"));
     });
 
     icheck();

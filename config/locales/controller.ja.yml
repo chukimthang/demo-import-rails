@@ -1,8 +1,0 @@
-ja:
-  controller:
-    admins:
-      created_success: "管理者を作成しました"
-      updated_success: "管理者を更新しました"
-      deleted_success: "管理者は削除されました"
-      not_found: "管理者が見つかりません"
-

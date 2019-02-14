@@ -17,7 +17,7 @@ class Backend::AdminsController < Backend::BaseController
     @admin = Admin.new admin_params
     if @admin.save
       respond_to do |format|
-        format.html {redirect_to admin_admins_path, notice: t('controller.admins.created_success')}
+        format.html {redirect_to admin_admins_path, notice: t('view.messages.created_success', model_name: t('view.admins.model_name'))}
       end
     else
       @breadcrumbs = {t('view.admins.admins') => admin_admins_path, t('view.button.new') => nil}
@@ -32,7 +32,7 @@ class Backend::AdminsController < Backend::BaseController
   def update
     if @admin.update_attributes admin_params
       respond_to do |format|
-        format.html {redirect_to admin_admins_path, notice: t('controller.admins.updated_success')}
+        format.html {redirect_to admin_admins_path, notice: t('view.messages.updated_success', model_name: t('view.admins.model_name'))}
       end
     else
       @breadcrumbs = {t('view.admins.admins') => admin_admins_path, t('view.button.edit') => nil}
@@ -42,7 +42,7 @@ class Backend::AdminsController < Backend::BaseController
 
   def destroy
     if @admin.destroy
-      flash[:success] = t('controller.admins.deleted_success')
+      flash[:success] = t('view.messages.deleted_success', model_name: t('view.admins.model_name'))
     else
       flash[:danger] = @admin.errors.full_messages
     end
@@ -54,14 +54,14 @@ class Backend::AdminsController < Backend::BaseController
 
   def find_admin
     @admin = Admin.find_by_id params[:id]
-    redirect_to admin_admins_path, flash: {danger: t('controller.admins.not_found')} unless @admin
+    redirect_to admin_admins_path, flash: {danger: t('view.messages.not_found', model_name: t('view.admins.model_name'))} unless @admin
   end
 
   def admin_params
     if params[:admin][:password].blank?
-      params.require(:admin).permit :email, :role
+      params.require(:admin).permit :email
     else
-      params.require(:admin).permit :email, :password, :password_confirmation, :role
+      params.require(:admin).permit :email, :password, :password_confirmation
     end
   end
 end
