@@ -21,6 +21,12 @@ en:
       cancel: "Cancel"
       new: "New"
 
+    messages:
+      created_success: "%{model_name} was successfully created"
+      updated_success: "%{model_name} was successfully updated"
+      deleted_success: "%{model_name} was successfully deleted"
+      not_found: "%{model_name} not found"
+
     admins:
       model_name: "Admin"
       admins: "Admins"
@@ -29,7 +35,6 @@ en:
       password: "Password"
       password_confirmation: "Password Confirmation"
       role: "Role"
-      created_at: "Created at"
       list_admin: "List Admin"
       new_admin: "New Admin"
       edit_admin: "Edit Admin"

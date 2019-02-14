@@ -21,6 +21,12 @@ ja:
       cancel: "キャンセル"
       new: "新規作成"
 
+    messages:
+      created_success: "%{model_name} の作成が成功しました。"
+      updated_success: "%{model_name}の更新が成功しました。"
+      deleted_success: "%{model_name}の削除が成功しました。"
+      not_found: "%{model_name}が存在していません。"
+
     admins:
       model_name: "管理者"
       admins: "管理者"
