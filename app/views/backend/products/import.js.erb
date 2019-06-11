@@ -1,0 +1,10 @@
+var str = "";
+<% if @list_error.present? %>
+  <% @list_error.each do |error| %>
+    str += "<span style='color: red;'><%= error %></span><br>"
+  <% end %>
+  $(".show-error-wrapper").html(str);
+<% else %>
+  <% flash[:success] = "Import success" %>
+  window.location.replace("<%= admin_products_path %>");
+<% end %>

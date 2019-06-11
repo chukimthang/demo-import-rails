@@ -14,6 +14,14 @@
           <% end %>
         </li>
       <% end %>
+
+      <% if can? :index, Product %>
+        <li class="<%= 'active' if controller_name == 'products' %>">
+          <%= link_to admin_products_path do %>
+            <i class="fa fa-users"></i><span>Product</span>
+          <% end %>
+        </li>
+      <% end %>
     </ul>
   </section>
 </aside>

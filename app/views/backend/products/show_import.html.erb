@@ -1,0 +1,13 @@
+<section class="content listing-wrapper" id="admin-listing">
+  <div class="box">
+    <div class="box-body">
+      <div class="col-md-12">
+        <%= form_tag import_admin_products_path, multipart: true, remote: true do %>
+          <%= file_field_tag :file %>
+          <%= submit_tag "Import", class: "btn btn-success", style: "margin-top: 5px;" %>
+        <% end %>
+      </div>
+      <div class="col-md-12 show-error-wrapper"></div>
+    </div>
+  </div>
+</section>
