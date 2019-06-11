@@ -19,3 +19,10 @@ ja:
               too_short: 短すぎます
             password_confirmation:
               confirmation: パスワードと一致しません
+        product:
+          attributes:
+            name:
+              blank: 空欄を埋めてください
+              invalid: メールフォーマットが不正
+              taken: すでに存在します
+              too_short: 短すぎます

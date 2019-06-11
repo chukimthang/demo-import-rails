@@ -8,6 +8,12 @@ Rails.application.routes.draw do
     scope module: :backend do
       root 'home#index'
       resources :admins, except: :show
+      resources :products, only: [:index, :destroy] do
+        collection do
+          get :show_import
+          post :import
+        end
+      end
     end
   end
 
