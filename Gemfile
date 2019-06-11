@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.1'
-gem 'rails', '~> 5.2.2'
+ruby '2.4.5'
+gem 'rails', '~> 5.2.3'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
